@@ -1,109 +1,96 @@
-const array1 = [1, 2, 3];
-const array2 = [11, 22, 33];
-   const mixedArray = []
-   mixedArray.push(array2[0],array1[0],array2[1],array1[1],array2[2],array1[2])
-   console.log(mixedArray)
-
-
-   console.log("")
-
-
-
- function evenorodd(num){
-
- if (num%2==0) {
-    console.log("even");
-
-     
- } 
- else{console.log("odd");}  
+function Hello(name) {
+    console.log("Hello " + name)
 }
-evenorodd(6);
+Hello("Themba")
 
-
-function frame(arr){
-    function fill(str, length, char)
+function evenOrOdd(num) {
+    if (num % 2 == 0) {
+        return "even"
+    } else {
+        return "odd"
+    }
 }
-let size =arr.map((str) => {
-    return str.length;
-})
- .reduce((a, b) => {
-    return Math.max(a, b);
-});
+console.log(evenOrOdd(11))
 
-    let line = fill('', size + 5, '*');
-    arr =arr.map((element) => {
-        return '* '+ fill(element, size, ' ') +'* ';
- })
-
-        arr.unshift(line);
-        arr.push(line);
-
-        return arr.join('\n');
-
-        console.log(frame(["write", "good", "code", "every", "day"]));
-
-
-
-  function isosceles(num){
-    var space=num;
-    for(var l=1; l>=num; l++){
-        console.log(" ".repeat(space)) +"#".repeat((l*2)-1)
-        
-    }
-    console(4)
-
-
-
- function square(num){
-    for(var i=0; i<=num; i++){
-        var line="";
-    for(var r=0; r<=num; r++){
-        line +="#";
-    }
-    console.log(line);
-    }
-
+function drawsquare(num) {
+    str = "#"
+    strRow = str.repeat(num) + "\n"
+    return strRow.repeat(num);
 }
-square(2);
+console.log(drawsquare(4))
 
-
-
-function triangle(num){
-    for(var i=1; i<=3; i++){
-        varline ="";
-    for(var s=0; s<=i; s++){
-     varline ="#";
+function rightAngleTriangle(num) {
+    for (let i = 1; i < num + 1; i++) {
+        str = "#"
+        strRow = str.repeat(i)
+        console.log(strRow)
     }
-    console.log(line);
-    }
-    
 }
-triangle(3);
+rightAngleTriangle(4)
 
-
-
-function sayHi(name){
-
-console.log(" Hello "+ name)
-}
-sayHi("Tshepo!");
-
-
-
-function longest(array1){
-
-    varlongestword="";   
-    varwordlength=0;
-    
-    for(var i=0; i<=array1.length; i++){
-    if(wordlength<array1[1].length){
-        longestword=array1[i];
+function isosceles(num) {
+    var ary = []
+    for (let i = 0; num > ary.length; i++) {
+        if (i % 2 != 0) {
+            ary.push(i)
+        }
     }
+    hash = "#"
+    space = " "
+    for (let i = 0; i < ary.length; i++) {
+        invisiblespace = ary.length - i
+        isoscelesline = space.repeat(invisiblespace)
+        hashrepeat = hash.repeat(ary[i])
+        console.log(isoscelesline + hashrepeat + isoscelesline)
     }
-    console.log(longword)
-
-    longest(["the","quick","brown", "fox", "ate", "my", "chickens"])
 }
+isosceles(4)
 
-  }
+var longest = ["the", "quick", "brown", "fox", "ate", "my"]
+function longestString(array) {
+    var longString = "";
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length > longString.length) {
+            longString = array[i]
+        } else if (array[i].length == longString.length) {
+            longString += ("\n" + array[i])
+        }
+    }
+    return longString
+}
+console.log(longestString(longest))
+
+let cars = (["Mercedes", "BMW", "Porche", "Koenigsegg"])
+let food = (["Eggs", "Burger", "Pizza", "Chocolate"])
+function AddArray(array1, array2) {
+    var combinedArray = [];
+    array1.forEach((item, index) => {
+        combinedArray.push(item)
+        combinedArray.push(array2[index])
+    });
+    return combinedArray;
+}
+console.log(AddArray(cars, food))
+
+var frame = (["Write", "good", "code", "every", "day"])
+function frameWithText(array) {
+    hash = "*"
+    space = " "
+    var longString = ""
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length > longString.length) {
+            longString = array[i].length
+        }
+    }
+    var addedLength = longString + 4
+    console.log(hash.repeat(addedLength))
+    for (let i = 0; i < array.length; i++) {
+        invisiblespace = longString - array[i].length + 1
+        hashspace = space.repeat(invisiblespace) + hash
+        spacehash = hash + space
+        console.log(spacehash + array[i] + hashspace)
+    }
+    console.log(hash.repeat(addedLength))
+}
+frameWithText(frame)
+  
