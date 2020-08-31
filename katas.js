@@ -1,7 +1,7 @@
 function Hello(name) {
     console.log("Hello " + name)
 }
-Hello("Themba")
+Hello("Andisiwe")
 
 function evenOrOdd(num) {
     if (num % 2 == 0) {
@@ -29,18 +29,18 @@ function rightAngleTriangle(num) {
 rightAngleTriangle(4)
 
 function isosceles(num) {
-    var ary = []
-    for (let i = 0; num > ary.length; i++) {
+    var arr = []
+    for (let i = 0; num > arr.length; i++) {
         if (i % 2 != 0) {
-            ary.push(i)
+            arr.push(i)
         }
     }
     hash = "#"
     space = " "
-    for (let i = 0; i < ary.length; i++) {
-        invisiblespace = ary.length - i
+    for (let i = 0; i < arr.length; i++) {
+        invisiblespace = arr.length - i
         isoscelesline = space.repeat(invisiblespace)
-        hashrepeat = hash.repeat(ary[i])
+        hashrepeat = hash.repeat(arr[i])
         console.log(isoscelesline + hashrepeat + isoscelesline)
     }
 }
