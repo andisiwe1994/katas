@@ -1,6 +1,7 @@
-function drawsquare(num) {
+function drawSquare(num) {
   str = "#";
   strRow = str.repeat(num) + "\n";
   return strRow.repeat(num);
 }
-console.log(drawsquare(4));
+console.log(drawSquare(4));
+  

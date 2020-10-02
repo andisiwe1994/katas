@@ -8,10 +8,10 @@ function isosceles(num) {
   hash = "#";
   space = " ";
   for (let i = 0; i < arr.length; i++) {
-    invisiblespace = arr.length - i;
-    isoscelesline = space.repeat(invisiblespace);
-    hashrepeat = hash.repeat(arr[i]);
-    console.log(isoscelesline + hashrepeat + isoscelesline);
+    invisibleSpace = arr.length - i;
+    isoscelesLine = space.repeat(invisibleSpace);
+    hashRepeat = hash.repeat(arr[i]);
+    console.log(isoscelesLine + hashRepeat + isoscelesLine);
   }
 }
 isosceles(4);

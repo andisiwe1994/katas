@@ -20,4 +20,3 @@ function frameWithText(array) {
 }
 
 frameWithText(frame);
-  

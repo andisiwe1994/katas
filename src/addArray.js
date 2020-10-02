@@ -1,6 +1,6 @@
 let cars = ["Mercedes", "BMW", "Porche", "Koenigsegg"];
 let food = ["Eggs", "Burger", "Pizza", "Chocolate"];
-function AddArray(array1, array2) {
+function addArray(array1, array2) {
   var combinedArray = [];
   array1.forEach((item, index) => {
     combinedArray.push(item);
@@ -8,4 +8,4 @@ function AddArray(array1, array2) {
   });
   return combinedArray;
 }
-console.log(AddArray(cars, food));
+console.log(addArray(cars, food));
